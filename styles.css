@@ -1,0 +1,11 @@
+.frame {
+  --corner: 1em;
+  --bg: white;
+  background-image:
+    radial-gradient(calc(2 * var(--corner)) at    0    0, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%), /* Safari will break if we put 100% */
+    radial-gradient(calc(2 * var(--corner)) at    0 100%, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+    radial-gradient(calc(2 * var(--corner)) at 100% 100%, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+    radial-gradient(calc(2 * var(--corner)) at 100%    0, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+    linear-gradient(to  right, transparent var(--corner), var(--bg) var(--corner), var(--bg) calc(100% - var(--corner)), transparent calc(100% - var(--corner))),
+    linear-gradient(to bottom, transparent var(--corner), var(--bg) var(--corner), var(--bg) calc(100% - var(--corner)), transparent calc(100% - var(--corner)));
+}
